@@ -1,0 +1,28 @@
+.cat_img {
+  height: 100px;
+}
+
+.cat-item {
+  background: #ffffff;
+  transition: 0.5s;
+}
+
+.cat-item:hover {
+  background: #6096B4;
+}
+
+.cat-item img {
+  transition: 0.5s;
+}
+
+.cat-item:hover img {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}

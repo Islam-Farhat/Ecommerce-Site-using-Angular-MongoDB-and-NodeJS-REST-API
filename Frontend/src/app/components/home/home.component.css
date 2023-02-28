@@ -1,0 +1,65 @@
+.category{
+  border-radius: 50%;
+}
+.category:hover {
+  transform: scale(1.1);
+}
+.header{
+  font-family: Raleway;
+  color:#06283D;
+}
+.proName,.section{
+  color: #2e3a4f;
+}
+.price{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #256D85;
+}
+
+.productPic {
+  transition: transform .7s;
+}
+
+.productPic:hover {
+  transform: scale(1.1);
+}
+.content{
+  background-color: #4da0d4;
+  font-family:Raleway;
+}
+.services
+{
+  background-color: #DFF6FF ;
+  color:#06283D;
+}
+p{
+  font-family:Raleway;
+}
+.new{
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 100px;
+  background-color: rgb(205, 19, 19);
+  color:#fff
+}
+.btn-solid{
+  background-color:#4DA0D4;
+  color: #fff;
+}
+.btn-solid:hover{
+  color:#4DA0D4;
+  border:solid 1px #4DA0D4;
+  background-color: #fff;
+}
+.btn-reverse:hover{
+  color:#fff;
+  background-color: #4DA0D4;
+}
+.btn-reverse{
+  color:#4DA0D4;
+  border:solid 1px #4DA0D4;
+  background-color: #fff;
+}
+

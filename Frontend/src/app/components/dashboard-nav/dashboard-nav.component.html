@@ -1,0 +1,56 @@
+<div class="nav">
+    <ul>
+        <li><a href=" " class="logo">
+                <img src="assets/imgs/shopping-cart.png" alt="Logo" />
+                <span class="nav-item">Admin</span></a>
+        </li>
+        <li>
+            <a href="" routerLink="/dashboard" routerLinkActive=" fw-semibold ">
+                <i class="fas fa-menorah"></i>
+                <span class="nav-item">
+                    Dashboard
+                </span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/dashboard/addproduct" routerLinkActive=" fw-semibold ">
+                <i class="fas fa-solid fa-list"></i>
+                <span class="nav-item">
+                    Add Product
+                </span>
+            </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/categories" routerLinkActive=" fw-semibold ">
+            <i class="fas fa-solid fa-tablets"></i>
+              <span class="nav-item">
+                  Categories
+              </span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/addcategory" routerLinkActive=" fw-semibold ">
+            <i class="fas fa-solid fa-circle-plus"></i>
+              <span class="nav-item">
+                  Add Category
+              </span>
+          </a>
+        </li>
+        <li>
+            <a>
+                <i class="fas fa-solid fa-gear"></i>
+                <span class="nav-item">
+                    Setting
+                </span>
+            </a>
+        </li>
+        <li (click)="logOut()">
+            <a href="" class="logout">
+                <i class=" fas fa-solid fa-right-from-bracket"></i>
+                <span class="nav-item">
+                    Log out
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>

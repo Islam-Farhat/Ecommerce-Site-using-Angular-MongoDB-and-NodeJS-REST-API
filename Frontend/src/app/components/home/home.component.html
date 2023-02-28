@@ -1,0 +1,61 @@
+<app-navbar [nItem]="nItems"></app-navbar>
+<app-slider></app-slider>
+
+<div class="container my-5">
+  <div class="d-flex justify-content-center flex-wrap">
+    <div class="text-center m-2" *ngFor="let category of categories" routerLink="/products/{{category._id}}">
+      <img [src]="category.icon" class="category " width="150" height="150">
+      <h5 class="proName mt-3">{{category.name}}</h5>
+    </div>
+  </div>
+</div>
+<div class="content text-center text-light p-5 pt-3">
+  <div class="container pt-5">
+    <h2>What We Do</h2>
+    <p>Lorem ipsum dolor sit amet,
+      saepe vero eveniet perferendis, molestiae dolores quas facilis quo quis
+      perspiciatis, ipsam doloribus deserunt repellat laboriosam
+      molestias sit fugiat nam laborum? Maiores quaerat facere magni
+      non commodi ullam, consequuntur voluptatum harum, alias reiciendis vero ipsa dolor sapiente tempore quae. Debitis
+      doloribus nihil ut ex culpa quisquam quos accusantium sunt laborum libero quibusdam voluptas quidem aliquam ipsam
+      atque ipsum ratione, earum consequatur nam dolore! Rerum, numquam consectetur?</p>
+  </div>
+</div>
+<app-features-bar></app-features-bar>
+<div class="container p-5">
+  <h1 class="mt-5 header"> Trending This Week </h1>
+  <hr>
+  <div class="d-flex justify-content-center flex-wrap">
+    <div class=" m-3 text-center bg-light position-relative" style="width:300px" *ngFor="let product of featured">
+      <img [src]="product.image" class="productPic" width="300px">
+      <h5 class="proName mt-3">{{product.title}}</h5>
+      <p class="price">{{product.price}} L.E</p>
+      <div class="d-flex flex-wrap justify-content-center mb-4">
+        <button class="btn btn-solid rounded-pill  mx-1" (click)="addToCart(product)">Add to Cart </button>
+        <button class="btn btn-reverse rounded-pill  mx-1 " routerLink="/product/{{product._id}}">View Details </button>
+      </div>
+      <span class="new p-1">New</span>
+    </div>
+  </div>
+</div>
+<div class="container-fluid d-flex justify-content-center flex-wrap services p-5">
+  <div class="card m-3 p-3 text-center bg-light border-0">
+    <div class="card-text"><i class="fa-solid fa-bag-shopping fa-xl"></i></div>
+    <div class="card-title p-3">
+      <p>Easy to See Products <br> and Create your Order Online</p>
+    </div>
+  </div>
+  <div class="card m-3 p-3 text-center bg-light border-0 ">
+    <div class="card-text"><i class="fa-regular fa-clock fa-xl"></i></div>
+    <div class="card-title p-3 ">
+      <p>Always Available Any Time <br> At your service 24/7</p>
+    </div>
+  </div>
+  <div class="card m-3 p-3 text-center bg-light border-0">
+    <div class="card-text"><i class="fa-solid fa-truck-fast fa-xl"></i></div>
+    <div class="card-title p-3">
+      <p>Free and Fast Shipping <br> All over Egypt</p>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

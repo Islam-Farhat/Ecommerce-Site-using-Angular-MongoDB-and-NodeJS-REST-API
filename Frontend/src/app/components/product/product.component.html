@@ -1,0 +1,59 @@
+<div class="product-item  mb-4">
+    <div class="product-img position-relative overflow-hidden">
+        <img class="w-100" [src]="childproductsofcategory.image" alt="">
+        <div class="product-action" (click)="addToCart(childproductsofcategory)">
+            <a class="btn btn-outline-dark btn-square"><i class="fa fa-shopping-cart"></i></a>
+        </div>
+    </div>
+    <div class="text-center colorclass py-4">
+        <h6>{{childproductsofcategory?.title}}</h6>
+        <div class="d-flex align-items-center justify-content-center mt-2">
+            <h5>${{childproductsofcategory?.price}}</h5>
+        </div>
+        <div class="d-flex align-items-center justify-content-center mb-1" *ngIf="childproductsofcategory?.rate==1">
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small>({{childproductsofcategory?.rate}})</small>
+        </div>
+        <div class="d-flex align-items-center justify-content-center mb-1" *ngIf="childproductsofcategory?.rate==2">
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small>({{childproductsofcategory?.rate}})</small>
+        </div>
+        <div class="d-flex align-items-center justify-content-center mb-1" *ngIf="childproductsofcategory?.rate==3">
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small>({{childproductsofcategory?.rate}})</small>
+        </div>
+        <div class="d-flex align-items-center justify-content-center mb-1" *ngIf="childproductsofcategory?.rate==4">
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="far fa-star text-warning mr-1"></small>
+            <small>({{childproductsofcategory?.rate}})</small>
+        </div>
+        <div class="d-flex align-items-center justify-content-center mb-1" *ngIf="childproductsofcategory?.rate==5">
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small class="fa fa-star text-warning mr-1"></small>
+            <small>({{childproductsofcategory?.rate}})</small>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center mb-2">
+            
+            <button class="btn btn-reverse mt-2   mx-1 " routerLink="/product/{{childproductsofcategory._id}}">View Details </button>
+          </div>
+          
+    </div>
+</div>

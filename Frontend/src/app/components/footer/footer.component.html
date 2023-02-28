@@ -1,0 +1,48 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Our services</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Order status</a></li>
+          <li><a href="#">Payment options</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>online shop</h4>
+        <ul>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Wowen</a></li>
+          <li><a href="#">shoes</a></li>
+          <li><a href="#">Bags</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <button *ngIf="showBtn$ | async" class="top-btn" (click)="gotoTop()">
+          <img src="https://ps.w.org/back-to-the-top-button/assets/icon-256x256.png?rev=2283756"
+            style="width: 60px; height: 60px; border: none;" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+

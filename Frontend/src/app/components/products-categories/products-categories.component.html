@@ -1,0 +1,58 @@
+<app-navbar [nItem]="nItems"></app-navbar>
+
+<!--
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-lg-3 col-md-3 col-sm-2 px-sm-2 px-0 bg-light">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white  min-v-110 ">
+        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <h2 style=" margin-bottom: 20px; margin-top: 30px;" class="title"> Categories </h2>
+        </a>
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item " *ngFor="let category of categories" >
+            <a class="nav-link align-middle px-0" (click)="getIdCategory(category._id)" style="cursor: pointer;">
+              <img [src]="category.icon" class="img">
+              <span class="font ms-1 d-none d-sm-inline">{{category.name.toUpperCase()}}</span>
+            </a>
+            <hr>
+          </li>
+
+        </ul>
+
+
+      </div>
+    </div>
+
+    <div class="col row py-3">
+      <app-product class="col-lg-3 col-md-6 col-sm-10 pb-1" *ngFor="let category of productsofCategory"
+        [childproductsofcategory]="category"></app-product>
+    </div>
+
+  </div>
+</div>
+ -->
+
+<div class="container-fluid">
+<div class="row flex-nowrap">
+  <div class="col-auto col-md-3 col-xl-2 px-0 slide">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-0  pt-2 text-white min-vh-100">
+          <a class="d-flex align-items-center pb-3 px-5 mb-md-0 me-md-auto text-decoration-none">
+              <h5 class="fs-5 d-none d-sm-inline mt-2 " style="color: #06283D;">CATEGORIES</h5>
+          </a>
+          <ul class="nav nav-pills flex-column mb-sm-auto w-100 mb-0 align-items-center align-items-sm-start" id="menu">
+            <li class="nav-item slide-item w-100 px-4" *ngFor="let category of categories; let i = index" (click)="getIdCategory(category._id,i)" style="cursor: pointer;" >
+              <a class="nav-link align-middle px-0" >
+                <img [src]="category.icon" class="img">
+                <span class="font ms-1 d-none d-sm-inline">  {{category.name.toUpperCase()}}</span>
+              </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="col row py-3">
+    <app-product class="col-lg-3 col-md-6 col-sm-10 pb-1" *ngFor="let category of productsofCategory"
+    [childproductsofcategory]="category" (newItemEvent)="addItem($event)"></app-product>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>

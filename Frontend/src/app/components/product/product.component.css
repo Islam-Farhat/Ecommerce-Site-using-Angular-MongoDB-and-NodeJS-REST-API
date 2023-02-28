@@ -1,0 +1,80 @@
+.product-item {
+  transition: 0.5s;
+}
+
+.product-action {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.product-action a.btn {
+  position: relative;
+  margin: 0 3px;
+  margin-top: 100px;
+  opacity: 0;
+}
+
+.product-item:hover {
+  box-shadow: 0 0 30px #dddddd;
+}
+
+.product-item:hover .product-action {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.product-item:hover .product-action a.btn:first-child {
+  opacity: 1;
+  margin-top: 0;
+  transition: 0.3s 0s;
+}
+
+.product-item:hover .product-action a.btn:nth-child(2) {
+  opacity: 1;
+  margin-top: 0;
+  transition: 0.3s 0.05s;
+}
+
+.product-item:hover .product-action a.btn:nth-child(3) {
+  opacity: 1;
+  margin-top: 0;
+  transition: 0.3s 0.1s;
+}
+
+.product-item:hover .product-action a.btn:nth-child(4) {
+  opacity: 1;
+  margin-top: 0;
+  transition: 0.3s 0.15s;
+}
+
+.product-item .product-img img {
+  transition: 0.5s;
+}
+
+.product-item:hover .product-img img {
+  transform: scale(1.1);
+}
+
+.product-item .btn:hover {
+  color: #6096b4 !important;
+}
+
+.colorclass {
+  background: #0f6292;
+  color: #fff;
+}
+
+.btn-reverse:hover{
+  background-color: #ddd;
+  
+}
+.btn-reverse{
+  color:#0f6292;
+  background-color: #fff;
+}

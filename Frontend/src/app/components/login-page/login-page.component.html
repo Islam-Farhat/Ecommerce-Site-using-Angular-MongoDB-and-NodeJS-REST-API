@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<section class="py-5" style="background-color: #eee;">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-10">
+                <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body py-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-5 order-2 order-lg-1">
+                                <p class="text-center h1 fw-bold mb-5  mx-md-4 mt-4">Sign in</p>
+                                <form [formGroup]="userForm" (ngSubmit)="login($event)" class=" mx-md-4">
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            placeholder="Enter Your Username" aria-describedby="emailHelp"
+                                            formControlName="username">
+                                        <ng-container *ngIf="getusername.touched">
+                                            <div *ngIf="getusername.hasError('required')" id="emailHelp"
+                                                class="form-text text-danger">
+                                                Username is Required
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control" placeholder="Enter Your Password"
+                                            id="exampleInputPassword1" formControlName="password">
+                                        <ng-container *ngIf="getPassword.touched">
+                                            <div *ngIf="getPassword.hasError('required')" id="passwordHelp"
+                                                class="form-text text-danger">
+                                                Password is Required
+                                            </div>
+                                            <div *ngIf="getPassword.hasError('minlength')" id="passwordHelp"
+                                                class="form-text text-danger">
+                                                Password is too small
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                    <div class="h7 text-danger " *ngIf="errorFlag">Wrong username and Password</div>
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <button type="submit" class="btn btn-primary mt-3  " style="width: 120px;"
+                                            [disabled]="!userForm.valid">Login</button>
+                                        <div class="register mt-4">
+                                            New user?&nbsp;
+                                            <a routerLink="/register">
+                                                Sign up
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-10 col-lg-6  d-flex align-items-center order-1 order-lg-2">
+                                <img src="https://static.vecteezy.com/system/resources/previews/010/925/676/non_2x/online-registration-and-sign-up-concept-young-man-signing-up-or-login-to-online-account-on-smartphone-app-user-interface-secure-login-and-password-vector.jpg"
+                                    class="img-fluid" alt="Sample image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

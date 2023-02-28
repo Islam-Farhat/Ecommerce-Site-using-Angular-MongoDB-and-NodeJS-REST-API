@@ -1,0 +1,45 @@
+<app-navbar [nItem]="nItems"></app-navbar>
+<div class=" container my-5">
+  <div class="row justify-content-center  ">
+      <div class="col-lg-8 col-md-12 ">
+          <div class="wrapper">
+              <div class="product-img">
+                <img [src]="product.data.image" height="420" width="327">
+              </div>
+              <div class="product-info ">
+                <div class="product-text">
+                  <h1>{{product.data.title}}</h1>
+                  <h2>{{product.data.description}}</h2>
+                  <p class="pra">{{product.data.richDescription}}</p>
+                  <div class="Sizes mt-2">
+                      <p class="text-uppercase">Size :  <span >{{product.data.size}}</span></p>
+                  </div>
+                  <div class="Sizes ">
+                      <p class="text-uppercase">Color :  <span >{{product.data.color}}</span></p>
+                  </div>
+
+                  <div class=" mb-1 mt-1">
+                      <small class="fa fa-star text-primary mr-1"></small>
+                      <small class="fa fa-star text-primary mr-1"></small>
+                      <small class="fa fa-star text-primary mr-1"></small>
+                      <small class="far fa-star text-primary mr-1"></small>
+                      <small class="far fa-star text-primary mr-1"></small>
+
+                  </div>
+
+              </div>
+                <div class="product-price-btn">
+                  <p class=" mt-2"><span class="pri">{{product.data.price}}</span>$</p>
+                  <button type="button" (click)="addToCart(product.data)">Add to cart </button>
+
+                  
+                </div>
+                <div class="back">
+                <h6 class="mb-0"><a routerLink="/products" class="text-body"><i
+                  class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
+                </div>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>

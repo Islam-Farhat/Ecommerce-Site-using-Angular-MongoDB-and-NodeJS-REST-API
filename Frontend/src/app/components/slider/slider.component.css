@@ -1,0 +1,32 @@
+.overlay{
+  width: 100%;
+    position: absolute;
+    top:0;
+    height: 100%;
+    background-color: #8787894a;
+}
+.slide1Text{
+  position: absolute;
+  top: 35%;
+  right:15%;
+  font-family: Raleway;
+}
+.btn{
+  background-color: #3397da;
+  color: #fff;
+  font-family: Raleway;
+  width: 150px;
+}
+.btn:hover{
+  background-color: #47B5FF;
+}
+.slide2Text{
+  position: absolute;
+  top: 35%;
+  left:13%;
+  color: #04304d;
+  font-family: Raleway;
+}
+img{
+  height: 600px;
+}
